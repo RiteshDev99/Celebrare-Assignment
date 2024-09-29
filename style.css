@@ -1,0 +1,270 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  background-color: seashell;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.herosection {
+  height: 80vh;
+  width: 80vw;
+  background-color: rgb(231, 230, 230);
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.login-box {
+  height: 100%;
+  width: 65%;
+}
+
+.image {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  height: 75vh;
+  border-radius: 15px;
+  animation: imageFadeIn 2s ease-in-out;
+}
+
+
+
+.navBar {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.nav-item {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.button {
+  padding: 14px 25px;
+  border: 1px solid rgb(28, 28, 28);
+  border-radius: 22px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: rgba(28, 28, 28, 0.1);
+  transform: scale(1.1);
+}
+
+.nav-text {
+  color: rgb(168, 168, 168);
+}
+
+
+.login-item {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+  gap: 20px;
+  min-height: 100vh;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-text {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  padding: 3px 8vw;
+}
+
+.main-text {
+  padding: 0px 20px;
+  font-size: 2.8vw;
+  color: rgb(28, 28, 28);
+  animation: textFadeIn 2s ease-in-out;
+}
+
+.lower-text {
+  color: rgb(168, 168, 168);
+}
+
+input {
+  height: 6vh;
+  width: 30vw;
+  border-radius: 25px;
+  cursor: pointer;
+  outline: none;
+  padding: 0px 20px;
+  border: 1px solid rgb(168, 168, 168);
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+input:focus {
+  background-color: rgba(168, 168, 168, 0.1);
+}
+
+.check-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox {
+  height: 30px;
+  width: 18px;
+}
+
+.check-lowerText {
+  color: rgb(105, 105, 105);
+}
+
+
+#loginButton {
+  height: 6vh;
+  width: 24vw;
+  background-color: rgb(77, 150, 77);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10vw;
+  margin: 2px 4vw;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#loginButton:hover {
+  background-color: rgb(70, 130, 70);
+  transform: scale(1.05);
+}
+
+
+
+img {
+  height: 80%;
+  transition: height 0s, transform 0s;
+}
+
+.image-fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: height 0.5s ease-in-out, transform 0.5s ease-in-out;
+  z-index: 10;
+}
+
+
+.hidden {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.hidden-complete {
+  display: none;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes imageFadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
